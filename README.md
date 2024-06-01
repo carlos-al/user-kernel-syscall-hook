@@ -1,7 +1,7 @@
 # Combining Kernel and User-Mode Hooks for Enhanced System Monitoring
 
-This project implements techniques for both user-mode and kernel-mode system call hooking on Windows 11. System call
-hooking allows interception and modification of the standard behavior of system calls.
+This project implements techniques for both user-mode and kernel-mode system call hooking on Windows 11. 
+
 Last tested on
 
 ```
