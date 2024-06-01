@@ -1,0 +1,37 @@
+[package]
+name = "driver"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+crate-type = ["cdylib"]
+test = false
+
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+strip = true
+opt-level = "z"
+codegen-units = 1
+lto = true
+
+
+[dependencies]
+windows-kernel-sys = { path = "../../../driver/driver/windows-kernel-sys", features = ["netio"] }
+windows-kernel = { path = "../../../driver/driver/windows-kernel", features = ["alloc"] }
+common = { path = "../../../driver/driver/common" }
+macros = { path = "../macros" }
+infinity_hook = { path = "../infinity_hook" }
+obfstr = "0.4.3"
+serde = { version = "1.0.*", default-features = false }
+postcard = { version = "1.0.4", features = ["alloc"] }
+modular-bitfield = "0.11.2"
+
+
+[build-dependencies]
+failure = "0.1.8"
+winreg = "0.50.0"

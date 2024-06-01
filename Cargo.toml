@@ -1,0 +1,21 @@
+[workspace]
+resolver = "2"
+members = [
+    "client",
+    "driver",
+    "agent"
+    , "testing", "macros", "infinity_hook"]
+
+[profile.dev]
+panic = "abort"
+opt-level = "z"
+
+
+
+[profile.release]
+panic = "abort"
+strip = true
+opt-level = "z"
+codegen-units = 1
+lto = true
+

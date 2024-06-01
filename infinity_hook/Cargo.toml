@@ -1,0 +1,14 @@
+[package]
+name = "infinity_hook"
+version = "0.1.0"
+edition = "2021"
+
+
+
+[dependencies]
+windows-kernel-sys = { path = "../../../driver/driver/windows-kernel-sys", features = ["netio"] }
+windows-kernel = { path = "../../../driver/driver/windows-kernel", features = ["alloc"] }
+macros = { path = "../macros" }
+bitflags = "1.3.2"
+x86_64 = "0.15.1"
+smallvec = "1.13.1"

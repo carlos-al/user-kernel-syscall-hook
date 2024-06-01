@@ -1,0 +1,30 @@
+[package]
+name = "agent"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "agent"
+path = "src/lib.rs"
+crate-type = ["cdylib"]
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+
+[profile.release]
+panic = "abort"
+
+[profile.dev]
+panic = "abort"
+opt-level = "z"
+lto = "fat"
+
+
+[dependencies]
+ntapi = "0.4.1"
+macros = { path = "../macros" }
+compiler_builtins = "0.1.108"
+
+[dependencies.winapi]
+version = "0.3.9"
+features = ["cfg", "evntrace", "in6addr", "inaddr", "minwinbase", "ntsecapi", "windef", "winioctl", "ntdef", "ntstatus"]
+

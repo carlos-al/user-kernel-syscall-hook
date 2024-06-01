@@ -1,0 +1,8 @@
+[build]
+target = "x86_64-pc-windows-msvc"
+control-flow-guard = true
+rustflags = [
+    # Pre Link Args
+    # Post Link Args
+    "-C", "link-arg=/guard:cf",
+]

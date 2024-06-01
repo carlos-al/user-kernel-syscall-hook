@@ -1,0 +1,11 @@
+[package]
+name = "client"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+common = { path = "../../../driver/driver/common" }
+winioctl = { path = "C:\\Users\\carlos\\driver\\driver\\winioctl" }
+clap = { version = "4.0", features = ["derive"] }
+serde = { version = "1.0.*", default-features = false }
+postcard = { version = "1.0.4", features = ["alloc"] }
