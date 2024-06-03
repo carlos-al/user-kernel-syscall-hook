@@ -152,6 +152,8 @@ execution:
 
 ![](img/hooked.png)
 
+Is it PG-compliant? why/why not? What can be done to turn it (un)compliant?
+
 ## DLL Injection via Kernel APCs
 
 Leveraging Kernel APCs (KAPCs) for DLL injection is a well-established technique, and our implementation draws
